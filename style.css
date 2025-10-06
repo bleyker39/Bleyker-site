@@ -1,0 +1,43 @@
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at center, #1a0000 0%, #000 100%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  animation: breathing 6s ease-in-out infinite;
+}
+
+.container {
+  text-align: center;
+}
+
+.neon-text {
+  font-size: 4em;
+  font-family: 'Arial Black', sans-serif;
+  color: #ff3333;
+  text-shadow: 0 0 20px #ff0000, 0 0 40px #ff5555, 0 0 60px #ff9999;
+  animation: flicker 3s infinite;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #ffcccc;
+}
+
+@keyframes breathing {
+  0%, 100% { background: radial-gradient(circle at center, #2b0000 0%, #000 100%); }
+  50% { background: radial-gradient(circle at center, #3d0000 0%, #000 100%); }
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.6;
+  }
+}

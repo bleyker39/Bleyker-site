@@ -1,111 +1,194 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bleyker — Tienda Neon</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Online - Neon Style</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      border-bottom: 2px solid #0ff;
+      box-shadow: 0 0 15px #0ff;
+    }
+    header h1 {
+      font-size: 2.5em;
+      color: #0ff;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #111;
+      padding: 10px;
+      box-shadow: 0 0 10px #f0f;
+    }
+    nav a {
+      color: #f0f;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      text-shadow: 0 0 5px #f0f, 0 0 10px #f0f;
+    }
+    .container {
+      padding: 20px;
+    }
+    h2 {
+      color: #0ff;
+      border-bottom: 2px solid #f0f;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #0ff;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background: #111;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #0ff;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #f0f;
+    }
+    .product h3 {
+      margin: 10px 0;
+      color: #fff;
+      text-shadow: 0 0 5px #0ff;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #0ff;
+      color: #111;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      border-top: 2px solid #0ff;
+      box-shadow: 0 0 15px #0ff;
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="logo">BLEYKER</div>
-    <nav class="nav">
-      <a>Electrónica</a><a>Belleza</a><a>Fitness</a><a>Hogar</a><a>Mascotas</a><a>Digitales</a>
-    </nav>
+  <header>
+    <h1>Tienda Online Neon</h1>
   </header>
-
-  <main class="main">
-    <section class="hero">
-      <div class="hero-inner">
-        <h1 class="hero-title">BLEYKER — Lo mejor de 2025</h1>
-        <p class="hero-sub">Tienda con estilo, neón rojo y crema. Productos top seleccionados para ti.</p>
+  <nav>
+    <a href="#">Electrónica</a>
+    <a href="#">Belleza</a>
+    <a href="#">Fitness</a>
+    <a href="#">Hogar</a>
+    <a href="#">Mascotas</a>
+    <a href="#">Digitales</a>
+  </nav>
+  <div class="container">
+    <h2>Electrónica</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://i.imgur.com/PLBzj53.png" alt="Auriculares">
+        <h3>Auriculares Inalámbricos</h3>
+        <a href="#" class="btn">Ver en Amazon</a>
       </div>
-      <div class="hero-visual">
-        <svg width="260" height="160" viewBox="0 0 260 160" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0" y="0" width="260" height="160" rx="12" fill="#0b0b0b" stroke="#330000" stroke-width="2"/>
-          <g opacity="0.9">
-            <circle cx="40" cy="40" r="14" fill="#fff1e6" />
-            <rect x="80" y="18" width="120" height="8" rx="4" fill="#ff0f00" />
-            <rect x="80" y="34" width="90" height="8" rx="4" fill="#ffdcca" />
-            <rect x="80" y="50" width="140" height="8" rx="4" fill="#ff0f00" />
-          </g>
-        </svg>
+      <div class="product">
+        <img src="https://i.imgur.com/OpOvNnR.png" alt="Smartwatch">
+        <h3>Smartwatch Deportivo</h3>
+        <a href="#" class="btn">Comprar ahora</a>
       </div>
-    </section>
+    </div>
 
-    <section class="products">
-      <h2 class="section-title">Productos Destacados</h2>
-      <div class="grid">
-        <article class="card">
-          <div class="imgwrap">
-            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Auriculares">
-              <rect width="200" height="120" rx="10" fill="#080808"/>
-              <g transform="translate(20,18)" fill="none" stroke="#ff0f00" stroke-width="3" stroke-linecap="round">
-                <path d="M10 60 q30 -40 80 -2" />
-                <path d="M10 60 q30 40 80 2" />
-              </g>
-              <text x="12" y="108" fill="#ffdcca" font-size="11" font-family="Arial">Auriculares Inalámbricos</text>
-            </svg>
-          </div>
-          <h3>Auriculares Inalámbricos</h3>
-          <p class="muted">40h batería · ANC</p>
-          <div class="card-actions"><a class="btn neon">Ver producto</a><a class="btn ghost">Ficha</a></div>
-        </article>
-
-        <article class="card">
-          <div class="imgwrap">
-            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Smartwatch">
-              <rect width="200" height="120" rx="10" fill="#080808"/>
-              <rect x="60" y="20" width="80" height="80" rx="14" fill="none" stroke="#ffdcca" stroke-width="4"/>
-              <circle cx="100" cy="60" r="8" fill="#ff0f00"/>
-              <text x="12" y="108" fill="#ffdcca" font-size="11" font-family="Arial">Smartwatch Deportivo</text>
-            </svg>
-          </div>
-          <h3>Smartwatch Deportivo</h3>
-          <p class="muted">GPS · SpO2 · Sueño</p>
-          <div class="card-actions"><a class="btn neon">Comprar</a><a class="btn ghost">Ficha</a></div>
-        </article>
-
-        <article class="card">
-          <div class="imgwrap">
-            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skincare">
-              <rect width="200" height="120" rx="10" fill="#080808"/>
-              <g transform="translate(20,18)">
-                <rect x="0" y="0" width="40" height="80" rx="6" fill="#ffdcca"/>
-                <rect x="60" y="12" width="40" height="96" rx="6" fill="#ff0f00"/>
-              </g>
-              <text x="12" y="108" fill="#ffdcca" font-size="11" font-family="Arial">Kit Skincare</text>
-            </svg>
-          </div>
-          <h3>Kit de Skincare Antiedad</h3>
-          <p class="muted">Serum · Crema · Protector</p>
-          <div class="card-actions"><a class="btn neon">Descubrir</a><a class="btn ghost">Ficha</a></div>
-        </article>
-
-        <article class="card">
-          <div class="imgwrap">
-            <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Robot">
-              <rect width="200" height="120" rx="10" fill="#080808"/>
-              <rect x="30" y="36" width="140" height="48" rx="8" fill="#111"/>
-              <circle cx="70" cy="60" r="8" fill="#ffdcca"/>
-              <circle cx="130" cy="60" r="8" fill="#ff0f00"/>
-              <text x="12" y="108" fill="#ffdcca" font-size="11" font-family="Arial">Robot Aspirador</text>
-            </svg>
-          </div>
-          <h3>Robot Aspirador Inteligente</h3>
-          <p class="muted">Mapeo láser · App</p>
-          <div class="card-actions"><a class="btn neon">Lo quiero</a><a class="btn ghost">Ficha</a></div>
-        </article>
-
+    <h2>Belleza y Cuidado Personal</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://i.imgur.com/Icw4nJd.png" alt="Skincare">
+        <h3>Kit de Skincare Antiedad</h3>
+        <a href="#" class="btn">Descubrir</a>
       </div>
-    </section>
-  </main>
+      <div class="product">
+        <img src="https://i.imgur.com/6dbUOi4.png" alt="Perfume">
+        <h3>Perfume Bestseller 2025</h3>
+        <a href="#" class="btn">Ver precio</a>
+      </div>
+    </div>
 
-  <footer class="footer">
-    <div>© 2025 Bleyker — Diseñado por Bley</div>
-    <div class="small">Contacto · Aviso legal · Privacidad</div>
+    <h2>Fitness y Salud</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://i.imgur.com/7MLpRDA.png" alt="Suplementos">
+        <h3>Proteína & Suplementos</h3>
+        <a href="#" class="btn">Comprar ahora</a>
+      </div>
+      <div class="product">
+        <img src="https://i.imgur.com/fhnLbXg.png" alt="Ropa deportiva">
+        <h3>Ropa Deportiva Premium</h3>
+        <a href="#" class="btn">Ver catálogo</a>
+      </div>
+    </div>
+
+    <h2>Hogar y Cocina</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://i.imgur.com/mle16vF.png" alt="Robot aspirador">
+        <h3>Robot Aspirador Inteligente</h3>
+        <a href="#" class="btn">Lo quiero</a>
+      </div>
+      <div class="product">
+        <img src="https://i.imgur.com/7PGRR9f.png" alt="Cafetera">
+        <h3>Cafetera Automática</h3>
+        <a href="#" class="btn">Ver en tienda</a>
+      </div>
+    </div>
+
+    <h2>Mascotas</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://i.imgur.com/xEog3Yd.png" alt="Juguetes para perro">
+        <h3>Juguetes para Mascotas</h3>
+        <a href="#" class="btn">Comprar ahora</a>
+      </div>
+      <div class="product">
+        <img src="https://i.imgur.com/dEEB08b.png" alt="Cama para gatos">
+        <h3>Cama Ultra Cálida para Gatos</h3>
+        <a href="#" class="btn">Lo quiero</a>
+      </div>
+    </div>
+
+    <h2>Digitales</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://i.imgur.com/sTXgTQZ.png" alt="Curso online">
+        <h3>Curso Online Premium</h3>
+        <a href="#" class="btn">Acceder ahora</a>
+      </div>
+      <div class="product">
+        <img src="https://i.imgur.com/k7x8X5U.png" alt="Ebook">
+        <h3>Ebook Bestseller</h3>
+        <a href="#" class="btn">Descargar</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Tienda Online Neon | Todos los derechos reservados</p>
   </footer>
-
 </body>
 </html>

@@ -1,1 +1,0 @@
-Bleyker - Sitio mockup con estilo neón rojo/crema.\n\nInstrucciones:\n- Subir index.html y styles.css a GitHub Pages o Netlify.\n- Reemplazar botones con tus links de afiliado cuando los tengas.\n
